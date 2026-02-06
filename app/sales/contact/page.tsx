@@ -8,9 +8,9 @@ export default function SalesContact() {
             Banana Picker
           </a>
           <div className="flex gap-6 items-center">
-            <a href="/sales" className="hover:text-[var(--banana-yellow)] transition">Solutions</a>
-            <a href="/sales/pricing" className="hover:text-[var(--banana-yellow)] transition">Pricing</a>
-            <a href="/sales/contact" className="hover:text-[var(--banana-yellow)] transition font-semibold">Contact</a>
+            <a href="/#sales" className="hover:text-[var(--banana-yellow)] transition">Solutions</a>
+            <a href="/#pricing" className="hover:text-[var(--banana-yellow)] transition">Pricing</a>
+            <a href="/#contact" className="hover:text-[var(--banana-yellow)] transition font-semibold">Contact</a>
             <span className="text-[var(--banana-yellow)]">🤝 Partner</span>
           </div>
         </div>
