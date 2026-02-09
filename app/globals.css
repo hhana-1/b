@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Marbella Army";
+  src: url("/Marbella_Army.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   --background: #FFEB3B;
   --foreground: #1a1a1a;
@@ -39,8 +46,8 @@
   
   .nav-logo-wrapper {
     position: absolute !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
+    left: 2rem !important;
+    transform: none !important;
   }
 }
 
@@ -57,6 +64,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .logo {
-  font-family: var(--font-inter);
+  font-family: "Marbella Army", serif;
   font-weight: 700;
+  font-size: 3.5rem;
+  letter-spacing: 0.05em;
+  color: #FFC107;
+}
+
+.nav-logo-wrapper .logo {
+  color: #1a1a1a;
 }

@@ -5,7 +5,7 @@ export default function SalesHome() {
       <nav className="bg-[#666666] text-white shadow-lg">
         <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
           <a href="/" className="text-2xl logo hover:opacity-80 transition">
-            Banana Picker
+            BANANA PICKER
           </a>
           <div className="flex gap-6 items-center">
             <a href="/sales" className="hover:text-[#FFC107] transition font-semibold">Solutions</a>

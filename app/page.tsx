@@ -47,11 +47,11 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-[#FFEB3B] relative">
       {/* Navigation */}
-      <nav className="shadow-lg sticky top-0 z-50 bg-[#FFEB3B]/90 my-6">
+        <nav className="shadow-lg sticky top-0 z-50 bg-[#FFC107] mt-0 mb-6">
         <div className="nav-container max-w-7xl mx-auto px-4 py-8 flex flex-col items-center gap-4">
           <div className="nav-logo-wrapper flex justify-center">
-            <a href="/" className="hover:opacity-80 transition opacity-100">
-              <img src="/banana-logo.svg" alt="Banana Picker" className="h-16 opacity-100" />
+            <a href="/" className="hover:opacity-80 transition opacity-100 logo text-3xl text-black">
+              BANANA PICKER
             </a>
           </div>
           <div className="nav-buttons flex gap-6 flex-wrap justify-center w-full">
@@ -82,7 +82,7 @@ export default function Home() {
       <section className="max-w-7xl mx-auto px-4 py-24 text-center flex flex-col items-center justify-center min-h-[60vh] relative" style={{backgroundImage: 'url(/warehouse.png)', backgroundSize: 'cover', backgroundPosition: 'center'}}>
         <div className="absolute inset-0 bg-black/40"></div>
         <div className="mb-12 flex flex-col items-center relative z-10">
-          <img src="/banana-logo.svg" alt="Banana Picker" className="h-30 mb-8" />
+          <h1 className="text-8xl mb-8 logo">BANANA PICKER</h1>
           <p className="text-2xl text-[#FFC107] mb-8">Intelligent Warehouse Automation</p>
           <p className="text-lg text-[#FFC107] mb-12 max-w-3xl mx-auto">
             Revolutionize your fruit distribution with our advanced robotic picking and packaging system
