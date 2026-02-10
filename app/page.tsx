@@ -45,52 +45,58 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#FFEB3B] relative">
+    <div className="min-h-screen bg-black relative">
       {/* Navigation */}
-        <nav className="shadow-lg sticky top-0 z-50 bg-[#FFC107] mt-0 mb-6">
-        <div className="nav-container max-w-7xl mx-auto px-4 py-8 flex flex-col items-center gap-4">
-          <div className="nav-logo-wrapper flex justify-center">
-            <a href="/" className="hover:opacity-80 transition opacity-100 logo text-3xl text-black">
-              BANANA PICKER
-            </a>
-          </div>
-          <div className="nav-buttons flex gap-6 flex-wrap justify-center w-full">
-            <div className="flex flex-col items-center gap-2">
-              <a
-                href="/#sales"
-                className="px-6 py-2 bg-[#666666] text-white font-bold rounded-lg hover:bg-gray-700 transition whitespace-nowrap"
-              >
-                🤝 For Business Partners
+      <nav className="shadow-lg sticky top-0 z-50 bg-[#FFEB3B] mt-0 mb-6 pb-6">
+        <div className="nav-container max-w-7xl mx-auto px-4 flex flex-col items-start gap-0 relative bg-[#FFEB3B]">
+          <div className="flex w-full items-center justify-between py-4">
+            <div className="nav-logo-wrapper flex justify-start">
+              <a href="/" className="hover:opacity-80 transition opacity-100 logo text-3xl text-black">
+                BANANA PICKER
               </a>
-              <div className="flex gap-4 text-sm font-semibold text-[var(--machine-grey)]">
-                <a href="/#sales" className="hover:text-black transition">Solutions</a>
-                <a href="/#pricing" className="hover:text-black transition">Pricing</a>
-                <a href="/#contact" className="hover:text-black transition">Contact</a>
-              </div>
             </div>
             <a
               href="/user/dashboard"
-              className="px-6 py-2 bg-gray-500 text-white font-bold rounded-lg hover:bg-gray-600 transition whitespace-nowrap"
+              className="px-6 h-12 bg-black text-white font-bold rounded-2xl border border-black hover:bg-[#FFC107] hover:text-black transition-colors duration-300 inline-flex items-center justify-center text-center text-sm whitespace-nowrap mr-[1em]"
             >
-              🏢 User Dashboard
+              User Dashboard
             </a>
+          </div>
+          <div className="-mt-2 flex flex-nowrap w-full justify-start text-base font-semibold text-black whitespace-nowrap border-t border-b border-black/60 divide-x divide-black/60 bg-[#FFEB3B]">
+            <a
+              href="/#sales"
+              className="text-black cursor-pointer px-4 py-2 border-l border-black/60 transition-colors duration-300 hover:bg-[#FFC107] hover:text-black"
+            >
+              Solutions
+            </a>
+            <a
+              href="/#pricing"
+              className="text-black cursor-pointer px-4 py-2 transition-colors duration-300 hover:bg-[#FFC107] hover:text-black"
+            >
+              Pricing
+            </a>
+            <a
+              href="/#contact"
+              className="text-black cursor-pointer px-4 py-2 border-r border-black/60 transition-colors duration-300 hover:bg-[#FFC107] hover:text-black"
+            >
+              Contact
+            </a>
+            <span className="ml-auto w-px bg-black/60 self-stretch" aria-hidden="true"></span>
           </div>
         </div>
       </nav>
 
+      {/* Hero Text */}
+      <section className="max-w-7xl mx-auto px-4 pt-12 pb-6 text-left">
+        <p className="text-3xl text-white mb-4 font-extrabold">Intelligent Warehouse Automation</p>
+      </section>
+
       {/* Hero Section */}
-      <section className="max-w-7xl mx-auto px-4 py-24 text-center flex flex-col items-center justify-center min-h-[60vh] relative" style={{backgroundImage: 'url(/warehouse.png)', backgroundSize: 'cover', backgroundPosition: 'center'}}>
+      <section className="max-w-7xl mx-auto px-4 pt-[186px] pb-[30px] mt-6 text-center flex flex-col items-center justify-end relative" style={{backgroundImage: 'url(/warehouse.png)', backgroundSize: 'cover', backgroundPosition: 'center 65%'}}>
         <div className="absolute inset-0 bg-black/40"></div>
-        <div className="mb-12 flex flex-col items-center relative z-10">
-          <h1 className="text-8xl mb-8 logo">BANANA PICKER</h1>
-          <p className="text-2xl text-[#FFC107] mb-8">Intelligent Warehouse Automation</p>
-          <p className="text-lg text-[#FFC107] mb-12 max-w-3xl mx-auto">
-            Revolutionize your fruit distribution with our advanced robotic picking and packaging system
-          </p>
-        </div>
 
         {/* Feature highlights */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 relative z-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-auto relative z-20">
           <div className="bg-white rounded-lg shadow-lg p-8 border-t-4 border-[#FFC107]">
             <div className="text-5xl mb-4">⚡</div>
             <h3 className="text-2xl font-bold mb-3">10x Faster Processing</h3>
@@ -104,33 +110,32 @@ export default function Home() {
           </div>
 
           <div className="bg-white rounded-lg shadow-lg p-8 border-t-4 border-green-500">
-            <div className="text-5xl mb-4">✅</div>
+            <div className="text-5xl mb-4">
+              <img src="/quality.svg" alt="Quality" className="inline w-12 h-12 align-middle" />
+            </div>
             <h3 className="text-2xl font-bold mb-3">99.9% Accuracy</h3>
             <p className="text-gray-600">Eliminate picking errors and improve customer satisfaction with precision automation</p>
           </div>
         </div>
+      </section>
 
-        {/* Decorative Banana Image */}
-        <div className="absolute top-12 pointer-events-none drop-shadow-lg" style={{left: '74px'}}>
-          <img
-            src="/Perfect_bananas.png"
-            alt="Bananas"
-            className="w-48 h-auto opacity-100 transform -rotate-12 translate-x-0"
-          />
-        </div>
+      <section className="max-w-7xl mx-auto px-4 py-10 text-center">
+        <p className="text-lg text-white max-w-3xl mx-auto">
+          Revolutionize your fruit distribution with our advanced robotic picking and packaging system
+        </p>
       </section>
 
       {/* Sales Content Section */}
       <section id="sales" className="max-w-7xl mx-auto px-4 py-16">
         <div className="text-center mb-12">
-          <h2 className="text-5xl font-bold mb-4 text-gray-900">Transform Your Warehouse Operations</h2>
+          <h2 className="text-5xl font-bold mb-4 text-white">Transform Your Warehouse Operations</h2>
           <p className="text-2xl text-[#FFC107] mb-6">Advanced Robotic Automation for Fruit Distribution</p>
-          <p className="text-lg text-gray-600 mb-8 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-200 mb-8 max-w-3xl mx-auto">
             Increase efficiency, reduce costs, and improve product quality with our intelligent warehouse automation system
           </p>
           <a
             href="/sales/contact"
-            className="inline-block px-8 py-4 bg-[#FFEB3B] text-black font-bold text-lg rounded-lg hover:bg-yellow-500 transition"
+            className="inline-block px-8 py-4 bg-yellow-500 text-black font-bold text-lg rounded-lg hover:bg-white hover:text-black transition"
           >
             Request a Demo
           </a>
@@ -211,8 +216,8 @@ export default function Home() {
       {/* Pricing */}
       <section id="pricing" className="max-w-7xl mx-auto px-4 py-16">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4">Simple, Transparent Pricing</h2>
-          <p className="text-xl text-gray-600">Choose the perfect plan for your warehouse needs</p>
+          <h2 className="text-4xl font-bold mb-4 text-white">Simple, Transparent Pricing</h2>
+          <p className="text-xl text-gray-200">Choose the perfect plan for your warehouse needs</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -293,7 +298,7 @@ export default function Home() {
         </div>
 
         <div className="mt-12">
-          <h3 className="text-2xl font-bold mb-8 text-center">Frequently Asked Questions</h3>
+          <h3 className="text-2xl font-bold mb-8 text-center text-white">Frequently Asked Questions</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-white rounded-lg p-6 shadow">
               <h4 className="font-bold mb-2">What's the ROI timeline?</h4>
@@ -318,8 +323,8 @@ export default function Home() {
       {/* Contact */}
       <section id="contact" className="max-w-7xl mx-auto px-4 py-16">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4">Get In Touch</h2>
-          <p className="text-xl text-gray-600">Our team is ready to discuss your warehouse automation needs</p>
+          <h2 className="text-4xl font-bold mb-4 text-white">Get In Touch</h2>
+          <p className="text-xl text-gray-200">Our team is ready to discuss your warehouse automation needs</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">

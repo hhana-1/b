@@ -26,27 +26,16 @@
 }
 
 @media (min-width: 1180px) {
-  .nav-buttons {
-    position: absolute !important;
-    right: 2rem !important;
-    top: 50% !important;
-    transform: translateY(-50%) !important;
-    flex-wrap: nowrap !important;
-    width: auto !important;
-    justify-content: flex-end !important;
-  }
-  
   .nav-container {
-    flex-direction: row !important;
+    flex-direction: column !important;
     align-items: center !important;
     justify-content: center !important;
-    gap: 0 !important;
+    gap: 1rem !important;
     position: relative !important;
   }
-  
+
   .nav-logo-wrapper {
-    position: absolute !important;
-    left: 2rem !important;
+    position: static !important;
     transform: none !important;
   }
 }
@@ -72,5 +61,5 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-logo-wrapper .logo {
-  color: #1a1a1a;
+  color: var(--machine-grey);
 }
