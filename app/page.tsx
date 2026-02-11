@@ -47,17 +47,17 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gray-800">
       {/* Navigation */}
-      <nav className="shadow-lg sticky top-0 z-50 bg-[#666666] mt-0 mb-6 pb-6">
-        <div className="nav-container max-w-7xl mx-auto px-4 flex flex-col items-start gap-0 relative bg-[#666666]">
+      <nav className="shadow-lg sticky top-0 z-50 bg-[#666666] mt-0 pb-4">
+        <div className="nav-container max-w-7xl mx-auto flex flex-col items-start gap-0 relative bg-[#666666]">
           <div className="flex w-full items-center justify-between py-4">
             <div className="nav-logo-wrapper flex justify-start">
-              <a href="/" className="hover:opacity-80 transition opacity-100 logo text-3xl text-[#FFC107]">
+              <a href="/" className="hover:opacity-80 transition opacity-100 logo px-4 text-3xl text-[#FFC107]">
                 Banana Picker
               </a>
             </div>
             <a
               href="/user/dashboard"
-              className="px-6 h-12 bg-black text-[#FFC107] font-bold rounded-lg border border-black hover:border-gray-800 hover:bg-gray-800 hover:text-white transition-colors duration-300 inline-flex items-center justify-center text-center text-base whitespace-nowrap mr-[1em]"
+              className="px-6 h-12 bg-black text-[#FFC107] font-bold rounded-lg border border-black hover:border-bg-gray-800 hover:bg-gray-800 hover:text-white transition-colors duration-300 inline-flex items-center justify-center text-center text-base whitespace-nowrap mr-[1em]"
             >
               User Dashboard
             </a>
@@ -88,46 +88,45 @@ export default function Home() {
 
       {/* Hero Text */}
       <section className="max-w-7xl mx-auto px-4 pt-12 pb-6 text-center">
-        <p className="text-3xl text-black mb-4 font-extrabold">Intelligent Warehouse Automation</p>
+        <p className="text-7xl text-[#FFC107] mb-2 mt-6 font-bold">Intelligent Warehouse Automation</p>
       </section>
-      <section className="max-w-7xl mx-auto px-4 py-10 text-center">
-        <p className="text-lg text-black max-w-3xl mx-auto">
+      <section className="max-w-7xl mx-auto px-4 pt-1 mb-1 pb-10 text-center">
+        <p className="text-lg text-[#FFC107] max-w-3xxl mx-auto">
           Revolutionize your fruit distribution with our advanced robotic picking and packaging system
         </p>
       </section>
       {/* Hero Section */}
-      <section className="max-w-7xl mx-auto px-4 pt-[186px] pb-[30px] mt-6 text-center flex flex-col items-center justify-end relative" style={{backgroundImage: 'url(/warehouse.png)', backgroundSize: 'cover', backgroundPosition: 'center 65%'}}>
+      <section className="max-w-7xl mx-auto px-4 pt-[186px] pb-[30px] mt-6 text-center relative" style={{backgroundImage: 'url(/warehouse.png)', backgroundSize: 'cover', backgroundPosition: 'center 65%'}}>
         <div className="absolute inset-0 bg-black/40"></div>
-
-        {/* Feature highlights */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-auto relative z-20">
-          <div className="bg-white rounded-lg shadow-lg p-8 border-t-4 border-[#FFC107]">
-            <div className="text-5xl mb-4">
-              <img src="/munya.svg" alt="munja" className="inline w-12 h-12 align-middle" />
-            </div>
-            <h3 className="text-2xl font-bold mb-3">10x Faster Processing</h3>
-            <p className="text-gray-600">Automate your picking and packaging process to handle significantly more orders per day</p>
-          </div>
-
-          <div className="bg-white rounded-lg shadow-lg p-8 border-t-4 border-[#666666]">
-             <div className="text-xl mb-4">
-              <img src="/pouch.svg" alt="moneypouch" className="inline w-12 h-12 align-middle" />
-            </div>
-            <h3 className="text-2xl font-bold mb-3">60% Labor Cost Reduction</h3>
-            <p className="text-gray-600">Reduce manual labor costs while maintaining high quality standards and consistency</p>
-          </div>
-
-          <div className="bg-white rounded-lg shadow-lg p-8 border-t-4 border-green-500">
-            <div className="text-5xl mb-4">
-              <img src="/quality.svg" alt="Quality" className="inline w-12 h-12 align-middle" />
-            </div>
-            <h3 className="text-2xl font-bold mb-3">99.9% Accuracy</h3>
-            <p className="text-gray-600">Eliminate picking errors and improve customer satisfaction with precision automation</p>
-          </div>
-        </div>
       </section>
 
+      {/* Feature highlights */}
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+        <div className="bg-white rounded-lg shadow-lg p-8 border-t-4 border-[#FFC107]">
+          <div className="text-5xl mb-4">
+            <img src="/munya.svg" alt="munja" className="inline w-12 h-12 align-middle" />
+          </div>
+          <h3 className="text-2xl font-bold mb-3">10x Faster Processing</h3>
+          <p className="text-gray-600">Automate your picking and packaging process to handle significantly more orders per day</p>
+        </div>
 
+        <div className="bg-white rounded-lg shadow-lg p-8 border-t-4 border-[#666666]">
+           <div className="text-xl mb-4">
+            <img src="/pouch.svg" alt="moneypouch" className="inline w-12 h-12 align-middle" />
+          </div>
+          <h3 className="text-2xl font-bold mb-3">60% Labor Cost Reduction</h3>
+          <p className="text-gray-600">Reduce manual labor costs while maintaining high quality standards and consistency</p>
+        </div>
+
+        <div className="bg-white rounded-lg shadow-lg p-8 border-t-4 border-green-500">
+          <div className="text-5xl mb-4">
+            <img src="/quality.svg" alt="Quality" className="inline w-12 h-12 align-middle" />
+          </div>
+          <h3 className="text-2xl font-bold mb-3">99.9% Accuracy</h3>
+          <p className="text-gray-600">Eliminate picking errors and improve customer satisfaction with precision automation</p>
+        </div>
+      </div>      </div>
       {/* Sales Content Section */}
       <section id="sales" className="max-w-7xl mx-auto px-4 py-16">
         <div className="text-center mb-12">
