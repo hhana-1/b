@@ -45,7 +45,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#FFEB3B]">
+    <div className="min-h-screen bg-gray-800">
       {/* Navigation */}
       <nav className="shadow-lg sticky top-0 z-50 bg-[#666666] mt-0 mb-6 pb-6">
         <div className="nav-container max-w-7xl mx-auto px-4 flex flex-col items-start gap-0 relative bg-[#666666]">
@@ -57,7 +57,7 @@ export default function Home() {
             </div>
             <a
               href="/user/dashboard"
-              className="px-6 h-12 bg-black text-[#FFC107] font-bold rounded-xl border border-black hover:bg-gray-800 hover:text-[#FFC107] transition-colors duration-300 inline-flex items-center justify-center text-center text-base whitespace-nowrap mr-[1em]"
+              className="px-6 h-12 bg-black text-[#FFC107] font-bold rounded-lg border border-black hover:border-gray-800 hover:bg-gray-800 hover:text-white transition-colors duration-300 inline-flex items-center justify-center text-center text-base whitespace-nowrap mr-[1em]"
             >
               User Dashboard
             </a>
@@ -65,19 +65,19 @@ export default function Home() {
           <div className="-mt-2 flex flex-nowrap w-full justify-start text-base font-semibold text-white whitespace-nowrap border-t border-b border-white/30 divide-x divide-white/30 bg-black">
             <a
               href="/#sales"
-              className="text-white cursor-pointer px-4 py-2 border-l border-white/30 transition-colors duration-300 hover:bg-[#FFC107] hover:text-black"
+              className="text-white cursor-pointer px-4 py-2 border-l border-white/30 transition-colors duration-300 hover:bg-gray-800 hover:text-[#FFC107]"
             >
               Solutions
             </a>
             <a
               href="/#pricing"
-              className="text-white cursor-pointer px-4 py-2 transition-colors duration-300 hover:bg-[#FFC107] hover:text-black"
+              className="text-white cursor-pointer px-4 py-2 transition-colors duration-300 hover:bg-gray-800 hover:text-[#FFC107]"
             >
               Pricing
             </a>
             <a
               href="/#contact"
-              className="text-white cursor-pointer px-4 py-2 border-r border-white/30 transition-colors duration-300 hover:bg-[#FFC107] hover:text-black"
+              className="text-white cursor-pointer px-4 py-2 border-r border-white/30 transition-colors duration-300 hover:bg-gray-800 hover:text-[#FFC107]"
             >
               Contact
             </a>
