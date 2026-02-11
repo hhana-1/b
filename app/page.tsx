@@ -45,92 +45,100 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#FFEB3B] relative">
+    <div className="min-h-screen bg-gray-800">
       {/* Navigation */}
-      <nav className="shadow-lg sticky top-0 z-50 bg-[#FFEB3B]/90 my-6">
-        <div className="nav-container max-w-7xl mx-auto px-4 py-8 flex flex-col items-center gap-4">
-          <div className="nav-logo-wrapper flex justify-center">
-            <a href="/" className="hover:opacity-80 transition opacity-100">
-              <img src="/banana-logo.svg" alt="Banana Picker" className="h-16 opacity-100" />
-            </a>
-          </div>
-          <div className="nav-buttons flex gap-6 flex-wrap justify-center w-full">
-            <div className="flex flex-col items-center gap-2">
-              <a
-                href="/#sales"
-                className="px-6 py-2 bg-[#666666] text-white font-bold rounded-lg hover:bg-gray-700 transition whitespace-nowrap"
-              >
-                🤝 For Business Partners
+      <nav className="shadow-lg sticky top-0 z-50 bg-[#666666] mt-0 mb-6 pb-6">
+        <div className="nav-container max-w-7xl mx-auto px-4 flex flex-col items-start gap-0 relative bg-[#666666]">
+          <div className="flex w-full items-center justify-between py-4">
+            <div className="nav-logo-wrapper flex justify-start">
+              <a href="/" className="hover:opacity-80 transition opacity-100 logo text-3xl text-[#FFC107]">
+                Banana Picker
               </a>
-              <div className="flex gap-4 text-sm font-semibold text-[var(--machine-grey)]">
-                <a href="/#sales" className="hover:text-black transition">Solutions</a>
-                <a href="/#pricing" className="hover:text-black transition">Pricing</a>
-                <a href="/#contact" className="hover:text-black transition">Contact</a>
-              </div>
             </div>
             <a
               href="/user/dashboard"
-              className="px-6 py-2 bg-gray-500 text-white font-bold rounded-lg hover:bg-gray-600 transition whitespace-nowrap"
+              className="px-6 h-12 bg-black text-[#FFC107] font-bold rounded-lg border border-black hover:border-gray-800 hover:bg-gray-800 hover:text-white transition-colors duration-300 inline-flex items-center justify-center text-center text-base whitespace-nowrap mr-[1em]"
             >
-              🏢 User Dashboard
+              User Dashboard
             </a>
+          </div>
+          <div className="-mt-2 flex flex-nowrap w-full justify-start text-base font-semibold text-white whitespace-nowrap border-t border-b border-white/30 divide-x divide-white/30 bg-black">
+            <a
+              href="/#sales"
+              className="text-white cursor-pointer px-4 py-2 border-l border-white/30 transition-colors duration-300 hover:bg-gray-800 hover:text-[#FFC107]"
+            >
+              Solutions
+            </a>
+            <a
+              href="/#pricing"
+              className="text-white cursor-pointer px-4 py-2 transition-colors duration-300 hover:bg-gray-800 hover:text-[#FFC107]"
+            >
+              Pricing
+            </a>
+            <a
+              href="/#contact"
+              className="text-white cursor-pointer px-4 py-2 border-r border-white/30 transition-colors duration-300 hover:bg-gray-800 hover:text-[#FFC107]"
+            >
+              Contact
+            </a>
+            <span className="ml-auto w-px bg-white/30 self-stretch" aria-hidden="true"></span>
           </div>
         </div>
       </nav>
 
+      {/* Hero Text */}
+      <section className="max-w-7xl mx-auto px-4 pt-12 pb-6 text-center">
+        <p className="text-3xl text-black mb-4 font-extrabold">Intelligent Warehouse Automation</p>
+      </section>
+      <section className="max-w-7xl mx-auto px-4 py-10 text-center">
+        <p className="text-lg text-black max-w-3xl mx-auto">
+          Revolutionize your fruit distribution with our advanced robotic picking and packaging system
+        </p>
+      </section>
       {/* Hero Section */}
-      <section className="max-w-7xl mx-auto px-4 py-24 text-center flex flex-col items-center justify-center min-h-[60vh] relative" style={{backgroundImage: 'url(/warehouse.png)', backgroundSize: 'cover', backgroundPosition: 'center'}}>
+      <section className="max-w-7xl mx-auto px-4 pt-[186px] pb-[30px] mt-6 text-center flex flex-col items-center justify-end relative" style={{backgroundImage: 'url(/warehouse.png)', backgroundSize: 'cover', backgroundPosition: 'center 65%'}}>
         <div className="absolute inset-0 bg-black/40"></div>
-        <div className="mb-12 flex flex-col items-center relative z-10">
-          <img src="/banana-logo.svg" alt="Banana Picker" className="h-30 mb-8" />
-          <p className="text-2xl text-[#FFC107] mb-8">Intelligent Warehouse Automation</p>
-          <p className="text-lg text-[#FFC107] mb-12 max-w-3xl mx-auto">
-            Revolutionize your fruit distribution with our advanced robotic picking and packaging system
-          </p>
-        </div>
 
         {/* Feature highlights */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 relative z-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-auto relative z-20">
           <div className="bg-white rounded-lg shadow-lg p-8 border-t-4 border-[#FFC107]">
-            <div className="text-5xl mb-4">⚡</div>
+            <div className="text-5xl mb-4">
+              <img src="/munya.svg" alt="munja" className="inline w-12 h-12 align-middle" />
+            </div>
             <h3 className="text-2xl font-bold mb-3">10x Faster Processing</h3>
             <p className="text-gray-600">Automate your picking and packaging process to handle significantly more orders per day</p>
           </div>
 
           <div className="bg-white rounded-lg shadow-lg p-8 border-t-4 border-[#666666]">
-            <div className="text-5xl mb-4">💰</div>
+             <div className="text-xl mb-4">
+              <img src="/pouch.svg" alt="moneypouch" className="inline w-12 h-12 align-middle" />
+            </div>
             <h3 className="text-2xl font-bold mb-3">60% Labor Cost Reduction</h3>
             <p className="text-gray-600">Reduce manual labor costs while maintaining high quality standards and consistency</p>
           </div>
 
           <div className="bg-white rounded-lg shadow-lg p-8 border-t-4 border-green-500">
-            <div className="text-5xl mb-4">✅</div>
+            <div className="text-5xl mb-4">
+              <img src="/quality.svg" alt="Quality" className="inline w-12 h-12 align-middle" />
+            </div>
             <h3 className="text-2xl font-bold mb-3">99.9% Accuracy</h3>
             <p className="text-gray-600">Eliminate picking errors and improve customer satisfaction with precision automation</p>
           </div>
         </div>
-
-        {/* Decorative Banana Image */}
-        <div className="absolute top-12 pointer-events-none drop-shadow-lg" style={{left: '74px'}}>
-          <img
-            src="/Perfect_bananas.png"
-            alt="Bananas"
-            className="w-48 h-auto opacity-100 transform -rotate-12 translate-x-0"
-          />
-        </div>
       </section>
+
 
       {/* Sales Content Section */}
       <section id="sales" className="max-w-7xl mx-auto px-4 py-16">
         <div className="text-center mb-12">
-          <h2 className="text-5xl font-bold mb-4 text-gray-900">Transform Your Warehouse Operations</h2>
+          <h2 className="text-5xl font-bold mb-4 text-black">Transform Your Warehouse Operations</h2>
           <p className="text-2xl text-[#FFC107] mb-6">Advanced Robotic Automation for Fruit Distribution</p>
-          <p className="text-lg text-gray-600 mb-8 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-200 mb-8 max-w-3xl mx-auto">
             Increase efficiency, reduce costs, and improve product quality with our intelligent warehouse automation system
           </p>
           <a
             href="/sales/contact"
-            className="inline-block px-8 py-4 bg-[#FFEB3B] text-black font-bold text-lg rounded-lg hover:bg-yellow-500 transition"
+            className="inline-block px-8 py-4 bg-yellow-500 text-black font-bold text-lg rounded-lg hover:bg-white hover:text-black transition"
           >
             Request a Demo
           </a>
@@ -158,7 +166,7 @@ export default function Home() {
         </div>
 
         {/* Case Study / Stats */}
-        <div className="bg-gradient-to-r from-[#666666] to-gray-700 text-white rounded-lg p-12 mt-12">
+        <div className="bg-gradient-to-r from-[#666666] to-gray-700 text-black rounded-lg p-12 mt-12">
           <h3 className="text-3xl font-bold mb-8 text-center">Proven Results</h3>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
             <div>
@@ -211,8 +219,8 @@ export default function Home() {
       {/* Pricing */}
       <section id="pricing" className="max-w-7xl mx-auto px-4 py-16">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4">Simple, Transparent Pricing</h2>
-          <p className="text-xl text-gray-600">Choose the perfect plan for your warehouse needs</p>
+          <h2 className="text-4xl font-bold mb-4 text-black">Simple, Transparent Pricing</h2>
+          <p className="text-xl text-black">Choose the perfect plan for your warehouse needs</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -226,7 +234,7 @@ export default function Home() {
               }`}
             >
               {plan.highlighted && (
-                <div className="bg-[var(--machine-grey)] text-white py-2 text-center font-bold">
+                <div className="bg-[var(--machine-grey)] text-black py-2 text-center font-bold">
                   🏆 MOST POPULAR
                 </div>
               )}
@@ -246,8 +254,8 @@ export default function Home() {
                 <button
                   className={`w-full py-3 rounded font-bold mb-6 transition ${
                     plan.highlighted
-                      ? 'bg-[var(--machine-grey)] text-white hover:bg-gray-700'
-                      : 'bg-[var(--machine-grey)] text-white hover:bg-gray-700'
+                      ? 'bg-[var(--machine-grey)] text-black hover:bg-gray-700'
+                      : 'bg-[var(--machine-grey)] text-black hover:bg-gray-700'
                   }`}
                 >
                   Get Started
@@ -293,7 +301,7 @@ export default function Home() {
         </div>
 
         <div className="mt-12">
-          <h3 className="text-2xl font-bold mb-8 text-center">Frequently Asked Questions</h3>
+          <h3 className="text-2xl font-bold mb-8 text-center text-black">Frequently Asked Questions</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-white rounded-lg p-6 shadow">
               <h4 className="font-bold mb-2">What's the ROI timeline?</h4>
@@ -318,8 +326,8 @@ export default function Home() {
       {/* Contact */}
       <section id="contact" className="max-w-7xl mx-auto px-4 py-16">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4">Get In Touch</h2>
-          <p className="text-xl text-gray-600">Our team is ready to discuss your warehouse automation needs</p>
+          <h2 className="text-4xl font-bold mb-4 text-black">Get In Touch</h2>
+          <p className="text-xl text-black">Our team is ready to discuss your warehouse automation needs</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
@@ -423,7 +431,7 @@ export default function Home() {
           </form>
         </div>
 
-        <div className="bg-[var(--machine-grey)] text-white rounded-lg p-8 mt-12 text-center">
+        <div className="bg-[var(--machine-grey)] text-black rounded-lg p-8 mt-12 text-center">
           <h3 className="text-2xl font-bold mb-4">Why Choose Banana Picker?</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div>
@@ -443,7 +451,7 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section className="bg-[#666666] text-white py-12 mt-12">
+      <section className="bg-[#666666] text-black py-12 mt-12">
         <div className="max-w-7xl mx-auto text-center px-4">
           <h3 className="text-3xl font-bold mb-4">Ready to Transform Your Warehouse?</h3>
           <p className="text-lg mb-8">Join hundreds of successful companies using Banana Picker</p>
@@ -457,7 +465,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#666666] text-white text-center py-6 mt-16">
+      <footer className="bg-[#666666] text-black text-center py-6 mt-16">
         <p>&copy; 2026 Banana Picker. Automated Warehouse Solutions.</p>
       </footer>
     </div>
