@@ -1,3 +1,4 @@
+import NavBar from "./components/NavBar";
 export default function Home() {
   const plans = [
     {
@@ -45,60 +46,36 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-800">
+    <div className="min-h-screen bg-black">
       {/* Navigation */}
-      <nav className="shadow-lg sticky top-0 z-50 bg-[#666666] mt-0 pb-4">
-        <div className="nav-container max-w-7xl mx-auto flex flex-col items-start gap-0 relative bg-[#666666]">
-          <div className="flex w-full items-center justify-between py-4">
-            <div className="nav-logo-wrapper flex justify-start">
-              <a href="/" className="hover:opacity-80 transition opacity-100 logo px-4 text-3xl text-[#FFC107]">
-                Banana Picker
-              </a>
-            </div>
-            <a
-              href="/user/dashboard"
-              className="px-6 h-12 bg-black text-[#FFC107] font-bold rounded-lg border border-black hover:border-bg-gray-800 hover:bg-gray-800 hover:text-white transition-colors duration-300 inline-flex items-center justify-center text-center text-base whitespace-nowrap mr-[1em]"
-            >
-              User Dashboard
-            </a>
-          </div>
-          <div className="-mt-2 flex flex-nowrap w-full justify-start text-base font-semibold text-white whitespace-nowrap border-t border-b border-white/30 divide-x divide-white/30 bg-black">
-            <a
-              href="/#sales"
-              className="text-white cursor-pointer px-4 py-2 border-l border-white/30 transition-colors duration-300 hover:bg-gray-800 hover:text-[#FFC107]"
-            >
-              Solutions
-            </a>
-            <a
-              href="/#pricing"
-              className="text-white cursor-pointer px-4 py-2 transition-colors duration-300 hover:bg-gray-800 hover:text-[#FFC107]"
-            >
-              Pricing
-            </a>
-            <a
-              href="/#contact"
-              className="text-white cursor-pointer px-4 py-2 border-r border-white/30 transition-colors duration-300 hover:bg-gray-800 hover:text-[#FFC107]"
-            >
-              Contact
-            </a>
-            <span className="ml-auto w-px bg-white/30 self-stretch" aria-hidden="true"></span>
-          </div>
-        </div>
-      </nav>
+      <NavBar />
 
       {/* Hero Text */}
       <section className="max-w-7xl mx-auto px-4 pt-12 pb-6 text-center">
-        <p className="text-7xl text-[#FFC107] mb-2 mt-6 font-bold">Intelligent Warehouse Automation</p>
+        <p className="text-5xl text-[#FFC107] mb-2 mt-6 font-semibold">Intelligent Warehouse Automation</p>
       </section>
       <section className="max-w-7xl mx-auto px-4 pt-1 mb-1 pb-10 text-center">
-        <p className="text-lg text-[#FFC107] max-w-3xxl mx-auto">
+        <p className="text-lg text-white max-w-3xxl mx-auto">
           Revolutionize your fruit distribution with our advanced robotic picking and packaging system
         </p>
       </section>
       {/* Hero Section */}
-      <section className="max-w-7xl mx-auto px-4 pt-[186px] pb-[30px] mt-6 text-center relative" style={{backgroundImage: 'url(/warehouse.png)', backgroundSize: 'cover', backgroundPosition: 'center 65%'}}>
+      {/* <section className="max-w-7xl mx-auto px-4 pt-[186px] pb-[30px] mt-6 text-center relative" style={{backgroundImage: 'url(/warehouse.png)', backgroundSize: 'cover', backgroundPosition: 'center 65%'}}>
         <div className="absolute inset-0 bg-black/40"></div>
-      </section>
+      </section> */}
+
+        <section
+          className="max-w-7xl mx-auto px-4 pt-[186px] pb-[30px] mt-6 text-center relative border-4 rounded-lg"
+          style={{
+            backgroundImage: 'url(/warehouse.png)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center 65%',
+            borderColor: '#FFEB3B',
+          }}
+        >
+          <div className="absolute inset-0 bg-black/40 rounded-lg"></div>
+        </section>
+   
 
       {/* Feature highlights */}
       <div className="max-w-7xl mx-auto">
@@ -115,7 +92,7 @@ export default function Home() {
            <div className="text-xl mb-4">
             <img src="/pouch.svg" alt="moneypouch" className="inline w-12 h-12 align-middle" />
           </div>
-          <h3 className="text-2xl font-bold mb-3">60% Labor Cost Reduction</h3>
+          <h3 className="text-2xl font-bold mb-3">89% Labor Cost Reduction</h3>
           <p className="text-gray-600">Reduce manual labor costs while maintaining high quality standards and consistency</p>
         </div>
 
@@ -123,7 +100,7 @@ export default function Home() {
           <div className="text-5xl mb-4">
             <img src="/quality.svg" alt="Quality" className="inline w-12 h-12 align-middle" />
           </div>
-          <h3 className="text-2xl font-bold mb-3">99.9% Accuracy</h3>
+          <h3 className="text-2xl font-bold mb-3">97% Accuracy</h3>
           <p className="text-gray-600">Eliminate picking errors and improve customer satisfaction with precision automation</p>
         </div>
       </div>      </div>
@@ -137,7 +114,7 @@ export default function Home() {
           </p>
           <a
             href="/sales/contact"
-            className="inline-block px-8 py-4 bg-yellow-500 text-black font-bold text-lg rounded-lg hover:bg-white hover:text-black transition"
+            className="inline-block px-8 py-4 bg-[#FFEB3B] text-black font-bold text-lg rounded-lg hover:bg-yellow-500 hover:text-black transition"
           >
             Request a Demo
           </a>
@@ -153,13 +130,13 @@ export default function Home() {
 
           <div className="bg-white rounded-lg shadow-lg p-8 border-t-4 border-[#666666]">
             <div className="text-5xl mb-4">💰</div>
-            <h3 className="text-2xl font-bold mb-3">60% Labor Cost Reduction</h3>
+            <h3 className="text-2xl font-bold mb-3">89% Labor Cost Reduction</h3>
             <p className="text-gray-600">Reduce manual labor costs while maintaining high quality standards and consistency</p>
           </div>
 
           <div className="bg-white rounded-lg shadow-lg p-8 border-t-4 border-green-500">
             <div className="text-5xl mb-4">✅</div>
-            <h3 className="text-2xl font-bold mb-3">99.9% Accuracy</h3>
+            <h3 className="text-2xl font-bold mb-3">97% Accuracy</h3>
             <p className="text-gray-600">Eliminate picking errors and improve customer satisfaction with precision automation</p>
           </div>
         </div>
@@ -276,7 +253,7 @@ export default function Home() {
         </div>
 
         <div className="bg-white rounded-lg shadow p-8 mt-12">
-          <h3 className="text-2xl font-bold mb-6">What's Included</h3>
+          <h3 className="text-2xl font-semibold mb-6">What's Included</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <h4 className="font-bold mb-2 text-lg">Hardware</h4>
