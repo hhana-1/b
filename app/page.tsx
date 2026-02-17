@@ -79,7 +79,25 @@ export default function Home() {
 
       {/* Feature highlights */}
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+         </div>
+      {/* Sales Content Section */}
+      <section id="sales" className="max-w-7xl mx-auto px-4 py-16">
+        <div className="text-center mb-12">
+          <h2 className="text-5xl font-bold mb-4 text-black">Transform Your Warehouse Operations</h2>
+          <p className="text-2xl text-[#FFC107] mb-6">Advanced Robotic Automation for Fruit Distribution</p>
+          <p className="text-lg text-gray-200 mb-8 max-w-3xl mx-auto">
+            Increase efficiency, reduce costs, and improve product quality with our intelligent warehouse automation system
+          </p>
+          <a
+            href="/sales/contact"
+            className="inline-block px-8 py-4 bg-[#FFEB3B] text-black font-bold text-lg rounded-lg hover:bg-yellow-500 hover:text-black transition"
+          >
+            Request a Demo
+          </a>
+        </div>
+
+        {/* Benefits Section */}
+       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
         <div className="bg-white rounded-lg shadow-lg p-8 border-t-4 border-[#FFC107]">
           <div className="text-5xl mb-4">
             <img src="/munya.svg" alt="munja" className="inline w-12 h-12 align-middle" />
@@ -103,43 +121,7 @@ export default function Home() {
           <h3 className="text-2xl font-bold mb-3">97% Accuracy</h3>
           <p className="text-gray-600">Eliminate picking errors and improve customer satisfaction with precision automation</p>
         </div>
-      </div>      </div>
-      {/* Sales Content Section */}
-      <section id="sales" className="max-w-7xl mx-auto px-4 py-16">
-        <div className="text-center mb-12">
-          <h2 className="text-5xl font-bold mb-4 text-black">Transform Your Warehouse Operations</h2>
-          <p className="text-2xl text-[#FFC107] mb-6">Advanced Robotic Automation for Fruit Distribution</p>
-          <p className="text-lg text-gray-200 mb-8 max-w-3xl mx-auto">
-            Increase efficiency, reduce costs, and improve product quality with our intelligent warehouse automation system
-          </p>
-          <a
-            href="/sales/contact"
-            className="inline-block px-8 py-4 bg-[#FFEB3B] text-black font-bold text-lg rounded-lg hover:bg-yellow-500 hover:text-black transition"
-          >
-            Request a Demo
-          </a>
-        </div>
-
-        {/* Benefits Section */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
-          <div className="bg-white rounded-lg shadow-lg p-8 border-t-4 border-[#FFC107]">
-            <div className="text-5xl mb-4">⚡</div>
-            <h3 className="text-2xl font-bold mb-3">10x Faster Processing</h3>
-            <p className="text-gray-600">Automate your picking and packaging process to handle significantly more orders per day</p>
-          </div>
-
-          <div className="bg-white rounded-lg shadow-lg p-8 border-t-4 border-[#666666]">
-            <div className="text-5xl mb-4">💰</div>
-            <h3 className="text-2xl font-bold mb-3">89% Labor Cost Reduction</h3>
-            <p className="text-gray-600">Reduce manual labor costs while maintaining high quality standards and consistency</p>
-          </div>
-
-          <div className="bg-white rounded-lg shadow-lg p-8 border-t-4 border-green-500">
-            <div className="text-5xl mb-4">✅</div>
-            <h3 className="text-2xl font-bold mb-3">97% Accuracy</h3>
-            <p className="text-gray-600">Eliminate picking errors and improve customer satisfaction with precision automation</p>
-          </div>
-        </div>
+      </div>     
 
         {/* Case Study / Stats */}
         <div className="bg-gradient-to-r from-[#666666] to-gray-700 text-black rounded-lg p-12 mt-12">
